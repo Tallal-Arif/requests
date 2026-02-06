@@ -76,3 +76,40 @@ git config --global fetch.fsck.badTimezone ignore
 ---
 
 [![Kenneth Reitz](https://raw.githubusercontent.com/psf/requests/main/ext/kr.png)](https://kennethreitz.org) [![Python Software Foundation](https://raw.githubusercontent.com/psf/requests/main/ext/psf.png)](https://www.python.org/psf)
+
+
+
+
+# Requests Project - Docker & SonarQube Analysis
+
+**Students:**  
+- 22F-3675: Tallal-Arif  
+- 22F-3674: Partner Name  
+
+## 1. GitHub Repository
+
+- Repository URL: https://github.com/Tallal-Arif/requests  
+- Programming Language: Python  
+- Project Description: Python HTTP library for sending HTTP/1.1 requests, simple and widely used for web applications and API testing.
+
+---
+
+## 2. Dockerization of the Project
+
+### Dockerfile
+```dockerfile
+# Use Python 3.11 base image
+FROM python:3.11
+
+# Set working directory
+WORKDIR /app
+
+# Copy project files
+COPY . /app
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements-dev.txt
+
+# Default command
+CMD ["python3"]
+
